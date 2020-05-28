@@ -1,0 +1,12 @@
+<ul>
+    <li [routerLink]="['org']">Org</li>
+    <li [routerLink]="['member/1']">Member</li>
+</ul>
+<br>
+
+this.router.navigate
+<br>
+<button (click)="goOrg()">Org</button>
+<button (click)="goMember()">Member</button>
+<button (click)="Back()">Back</button>
+<router-outlet></router-outlet>

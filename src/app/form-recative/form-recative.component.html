@@ -1,0 +1,19 @@
+<p>form-recative works!</p>
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <label>
+        Username:
+        <input formControlName="username">
+    </label>
+    <br>
+    <label>
+        Realname:
+    <input formControlName="realname">
+    </label>
+    <br>
+    <label formArrayName="address" *ngFor="let addr of profileForm.get('address')['controls'];let idx = index">
+        <input [formControlName]="idx">
+        <br>
+    </label>
+    <br>
+    <button type="submit">submit</button>
+</form>

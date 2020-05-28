@@ -1,0 +1,8 @@
+<p>form-tpl works!</p>
+<form #profileForm="ngForm" (ngSubmit)="onSubmit(profileForm.value)">
+    <input [(ngModel)]="name" required name="username" #input>
+    <button type="submit" [disabled]="!profileForm.form.valid">Submit</button>
+</form>
+input: {{input.className}}
+<br>
+{{profileForm.value | json}}
